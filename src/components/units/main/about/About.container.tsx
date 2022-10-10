@@ -25,10 +25,11 @@ export default function About() {
   const [ref, inView] = useInView({
     threshold: 0,
   });
+
   return (
     <Container>
       <Wrapper ref={ref} className={inView ? "isActive" : ""}>
-        김상준
+        ABOUT
       </Wrapper>
     </Container>
   );

@@ -11,13 +11,13 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 6rem;
 `;
 
 export default function Skills() {
   return (
     <Container>
-      <Wrapper>asdfs</Wrapper>
+      <Wrapper>Skills</Wrapper>
     </Container>
   );
 }

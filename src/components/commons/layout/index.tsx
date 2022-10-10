@@ -14,7 +14,7 @@ export default function Layout(props: LayoutProps) {
   return (
     <>
       <Header />
-      <Body>{props.children}</Body>;
+      <Body>{props.children}</Body>
     </>
   );
 }

@@ -6,7 +6,6 @@ import Projects from "./projects/Projects.container";
 import Skills from "./skills/Skills.container";
 
 const Container = styled.div`
-  width: 100%;
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -27,7 +26,7 @@ const Container = styled.div`
 export default function Main() {
   return (
     <>
-      <Container className="scroll-container">
+      <Container>
         <About />
         <Skills />
         <Archiving />
