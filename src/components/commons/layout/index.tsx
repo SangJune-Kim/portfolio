@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { ReactNode } from "react";
+import Header from "./header";
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,5 +11,10 @@ const Body = styled.div`
 `;
 
 export default function Layout(props: LayoutProps) {
-  return <Body>{props.children}</Body>;
+  return (
+    <>
+      <Header />
+      <Body>{props.children}</Body>;
+    </>
+  );
 }
