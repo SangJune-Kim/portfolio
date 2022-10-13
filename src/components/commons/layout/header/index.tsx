@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 18px;
 `;
 
 const Main = styled.ul`

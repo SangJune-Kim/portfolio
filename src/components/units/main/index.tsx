@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import About from "./about/About.container";
-import Archiving from "./archiving/Archiving.container";
 import Career from "./career/Career.container";
 import Projects from "./projects/Projects.container";
 import Skills from "./skills/Skills.container";
@@ -29,7 +28,6 @@ export default function Main() {
       <Container>
         <About />
         <Skills />
-        <Archiving />
         <Projects />
         <Career />
       </Container>

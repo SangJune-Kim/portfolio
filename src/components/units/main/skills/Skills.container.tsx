@@ -11,7 +11,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 6rem;
+  margin-top: 4rem;
 `;
 
 export default function Skills() {
