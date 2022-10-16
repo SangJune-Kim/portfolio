@@ -5,20 +5,22 @@ import { useInView } from "react-intersection-observer";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
   align-items: center;
+  background-image: url("/img/beach.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 const Wrapper = styled.div`
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 4rem;
   opacity: 0;
   transition: all 1s ease-in-out;
-
+  background-color: rgba(244, 244, 244, 0.5);
   &.isActive {
     opacity: 1;
   }
@@ -30,6 +32,7 @@ const IntroWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
+  margin-top: 4rem;
 
   > h1 {
     font-size: 4rem;
@@ -54,10 +57,6 @@ const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  > h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
 `;
 
 const AboutBox = styled.div`
@@ -106,7 +105,6 @@ export default function About() {
           <p>직관적이고 사용하기 편한 서비스를 목표로 합니다.</p>
         </IntroWrapper>
         <AboutWrapper>
-          <h2>Contact</h2>
           <AboutBox>
             <AboutCol>
               <Icon src="https://cdn-icons-png.flaticon.com/512/597/597177.png" />

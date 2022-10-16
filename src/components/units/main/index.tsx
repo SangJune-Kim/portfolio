@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Header from "../../commons/layout/header";
 import About from "./about/About.container";
 import Career from "./career/Career.container";
 import Projects from "./projects/Projects.container";
@@ -25,6 +26,7 @@ const Container = styled.div`
 export default function Main() {
   return (
     <>
+      <Header />
       <Container>
         <About />
         <Skills />

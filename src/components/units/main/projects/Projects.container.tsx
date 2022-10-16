@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
   align-items: center;
   background-color: green;
 `;
