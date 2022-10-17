@@ -32,7 +32,9 @@ const Menu = styled.li`
   cursor: pointer;
 `;
 
-export default function Header() {
+export default function Header(props) {
+  const MenuData = ["About", "Skills", "Projects", "Career"];
+
   return (
     <Container>
       <Wrapper>
@@ -40,11 +42,11 @@ export default function Header() {
           <Menu>{`WalkingKim's portfolio`}</Menu>
         </Main>
         <MenuWrapper>
-          <Menu>About</Menu>
-          <Menu>skills</Menu>
-          <Menu>Archiving</Menu>
-          <Menu>projects</Menu>
-          <Menu>career</Menu>
+          {MenuData.map((el, i) => (
+            <Menu key={i} onClick={props.onClickMenu(i)}>
+              {el}
+            </Menu>
+          ))}
         </MenuWrapper>
       </Wrapper>
     </Container>

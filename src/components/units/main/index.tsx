@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useRef, useState } from "react";
 import Header from "../../commons/layout/header";
 import About from "./about/About.container";
 import Career from "./career/Career.container";
@@ -6,32 +7,29 @@ import Projects from "./projects/Projects.container";
 import Skills from "./skills/Skills.container";
 
 const Container = styled.div`
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-  ::-webkit-scrollbar {
-    width: 0;
-    background-color: transparent;
-  }
-
-  & > div {
-    scroll-snap-align: start;
-    height: 100vh;
-  }
+  width: 100%;
+  height: 100%;
 `;
 
 export default function Main() {
+  const toScroll = useRef<Array<HTMLDivElement>>([]);
+  const [toScrollTap, setToScrollTap] = useState("");
+
+  const onClickMenu = (i) => () => {
+    toScroll.current[i]?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <>
-      <Header />
+      <Header toScroll={toScroll} onClickMenu={onClickMenu} />
       <Container>
-        <About />
-        <Skills />
-        <Projects />
-        <Career />
+        <About toScroll={toScroll} onClickMenu={onClickMenu} />
+        <Skills toScroll={toScroll} onClickMenu={onClickMenu} />
+        <Projects toScroll={toScroll} onClickMenu={onClickMenu} />
+        <Career toScroll={toScroll} onClickMenu={onClickMenu} />
       </Container>
     </>
   );

@@ -1,12 +1,12 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
 import styled from "@emotion/styled";
 
 const Container = styled.div`
+  width: 100%;
+  height: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: yellow;
+  background-color: #f9c51d;
 `;
 
 const Wrapper = styled.div`
@@ -15,10 +15,19 @@ const Wrapper = styled.div`
   margin-top: 4rem;
 `;
 
-export default function Skills() {
+const Title = styled.h1`
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  border-bottom: 5px solid gray;
+  cursor: pointer;
+`;
+
+export default function Skills(props) {
   return (
-    <Container>
-      <Wrapper>Skills</Wrapper>
+    <Container ref={(el) => (props.toScroll.current[1] = el)}>
+      <Wrapper>
+        <Title onClick={props.onClickMenu}>Skills</Title>
+      </Wrapper>
     </Container>
   );
 }
