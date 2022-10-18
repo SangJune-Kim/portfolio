@@ -2,11 +2,11 @@ import styled from "@emotion/styled";
 
 const Container = styled.div`
   width: 100%;
-  height: 60rem;
+  height: 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: blue;
+  background-color: #f5f5f5;
 `;
 
 const Wrapper = styled.div`

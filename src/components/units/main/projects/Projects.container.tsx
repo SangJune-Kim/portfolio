@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: green;
+  background-color: #1d809f;
 `;
 
 const Wrapper = styled.div`

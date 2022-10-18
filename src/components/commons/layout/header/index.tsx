@@ -28,7 +28,8 @@ const MenuWrapper = styled.ul`
 `;
 
 const Menu = styled.li`
-  margin-right: 1rem;
+  font-size: 1.5rem;
+  margin-right: 2rem;
   cursor: pointer;
 `;
 
@@ -39,7 +40,7 @@ export default function Header(props) {
     <Container>
       <Wrapper>
         <Main>
-          <Menu>{`WalkingKim's portfolio`}</Menu>
+          <Menu onClick={props.onClickHome}>{`WalkingKim's portfolio`}</Menu>
         </Main>
         <MenuWrapper>
           {MenuData.map((el, i) => (

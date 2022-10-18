@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Container = styled.div`
@@ -38,17 +37,17 @@ const IntroWrapper = styled.div`
   margin-top: 4rem;
 
   > h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
   }
 
   > h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
   }
 
   > p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     :last-of-type {
       margin: 0;
@@ -156,7 +155,7 @@ export default function About(props) {
         </Wrapper>
       </Container>
       <AboutWrapper ref={(el) => (props.toScroll.current[0] = el)}>
-        <h1 onClick={props.onClickMenu}>About</h1>
+        <h1 onClick={props.onClickMenu(0)}>About</h1>
         <AboutBox>
           <AboutCol>
             <Icon src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" />
